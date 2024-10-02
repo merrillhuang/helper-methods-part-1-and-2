@@ -4,9 +4,18 @@
   <p style="color: red;"><%= message %></p>
 <% end %>
 
-<% form_with(model: @director, data: { turbo: false }) do |form| %>
+<%= form_with(model: @director, data: { turbo: false }) do |form| %>
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
+  <div>
+    <%= form.label :bio %>
+    <%= form.text_area :bio, { rows: 3} %>
+  </div>
+  <div>
+    <%= form.label :dob %>
+    <%= form.text_field :dob %>
+  </div>
+  <%= form.button %>
 <% end %>

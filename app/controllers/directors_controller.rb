@@ -23,7 +23,7 @@ class DirectorsController < ApplicationController
     director_attributes = params.require(:director).permit(:name, :bio, :dob)
     @director = Director.new(director_attributes)
 
-    if director.valid?
+    if @director.valid?
       @director.save
       redirect_to(directors_url, notice: "Director created successfully.")
     else
