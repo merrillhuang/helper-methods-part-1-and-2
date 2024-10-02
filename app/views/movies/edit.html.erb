@@ -7,12 +7,12 @@
 <%= form_with(model: @movie, method: :patch, data: { turbo: false }) do |form| %>
   <div>
     <%= form.label :title %>
-    <%= form.text_field :title, { value: @movie.title } %>
+    <%= form.text_field :title %>
   </div>
   
   <div>
     <%= form.label :description %>
-    <%= form.text_area :description, { value: @movie.description, rows: 3 } %>
+    <%= form.text_area :description, { rows: 3 } %>
   </div>
 
   <%= form.button %>

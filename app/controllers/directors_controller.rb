@@ -44,7 +44,7 @@ class DirectorsController < ApplicationController
       @director.save
       redirect_to(director_url(@director), notice: "Director updated successfully.")
     else
-      redirect_to(director_url(@director), notice: "Director failed to update successfully.")
+      redirect_to(edit_director_url(@director), notice: "Director failed to update successfully.")
     end
   end
 
