@@ -53,6 +53,6 @@ class DirectorsController < ApplicationController
 
     director.destroy
 
-    redirect_to(director_url, notice: "Director deleted successfully.")
+    redirect_to(directors_url, notice: "Director deleted successfully.")
   end
 end
