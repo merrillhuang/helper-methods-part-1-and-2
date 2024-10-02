@@ -1,4 +1,4 @@
-class DirectorController < ApplicationController
+class DirectorsController < ApplicationController
   def new
     @director = Director.new
   end
@@ -28,6 +28,7 @@ class DirectorController < ApplicationController
       redirect_to(directors_url, notice: "Director created successfully.")
     else
       render "directors/new"
+    end
   end
 
   def edit
@@ -44,6 +45,7 @@ class DirectorController < ApplicationController
       redirect_to(director_url(@director), notice: "Director updated successfully.")
     else
       redirect_to(director_url(@director), notice: "Director failed to update successfully.")
+    end
   end
 
   def destroy
