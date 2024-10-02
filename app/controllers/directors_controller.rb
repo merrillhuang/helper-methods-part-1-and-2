@@ -4,7 +4,7 @@ class DirectorsController < ApplicationController
   end
 
   def index
-    @directors = Director.order(created: :desc)
+    @directors = Director.order(created_at: :desc)
 
     respond_to do |format|
       format.json do
